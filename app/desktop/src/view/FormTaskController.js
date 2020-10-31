@@ -7,15 +7,13 @@ Ext.define('todolist-ext-js.view.FormTaskController', {
 
     onAddClick: function() {
         var task = Ext.create('todolist-ext-js.model.Task', {
-            content: 'New task',
+            content: Ext.getCmp('task').getValue(),
             date: Ext.Date.format(new Date(), 'Y-m-d'),
             done: false,
         })
-        console.log(task);
-
-        var store = Ext.getStore('ToDoList') 
-        store.add(task)    
-
-    },
+        var store = Ext.getStore('ToDoList')
+        store.add(task)
+        Ext.getCmp('todolistgrid').store.reload()
+        },
     
 })

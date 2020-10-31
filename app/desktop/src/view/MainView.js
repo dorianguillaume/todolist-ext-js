@@ -2,6 +2,7 @@ Ext.define('todolist-ext-js.view.MainView', {
     extend: 'Ext.Container',
     xtype: 'mainview',
     cls: 'mainview',
+
     layout: {
         type:'hbox',
         vertical: true,
@@ -10,6 +11,6 @@ Ext.define('todolist-ext-js.view.MainView', {
     
     items: [
         {xtype: 'formtaskview'},
-        {xtype: 'todolistview'},
+        {xtype: 'todolistview'},    
     ],
 });

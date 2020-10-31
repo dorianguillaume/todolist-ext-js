@@ -4,6 +4,7 @@ Ext.define('todolist-ext-js.view.ToDoListView', {
     xtype: 'todolistview',
     title: 'ToDo List',
     store: {type: 'todolist'},
+    controller: 'todolistcontroller',
     height: 400,
     width: 700,
     multiColumnSort: true,
@@ -24,6 +25,22 @@ Ext.define('todolist-ext-js.view.ToDoListView', {
         text: 'Done',    
         xtype: 'checkcolumn',
         dataIndex: 'done'
-    }],
+    },
+    {
+        width: 70,
+        hideable: false,
+
+        cell: 
+        {
+            tools: 
+            {
+                approve: 
+                {
+                    iconCls: 'x-fa fa-check green',
+                    handler: 'reloadAction',
+                },
+            }
+        }
+    }]
    
 });

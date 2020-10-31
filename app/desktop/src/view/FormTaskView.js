@@ -20,6 +20,7 @@ Ext.define('todolist-ext-js.view.FormTaskView',{
         width: 400,
         items:[{            
             xtype: 'textfield',
+            id: 'task',
             labelAlign: 'left',
             label: 'Task' 
                    

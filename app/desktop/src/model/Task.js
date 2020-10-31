@@ -1,8 +1,8 @@
 Ext.define('todolist-ext-js.model.Task',{
     extend: 'Ext.data.Model',
     alias: 'model.task',
+    idProperty: 'extraIdProperty',
     fields:[
-        { name: 'id', defaultValue: ''},
         { name: 'content' },
         { name: 'date',},
         { name: 'done', type: 'boolean', defaultValue: false}
