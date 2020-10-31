@@ -12,7 +12,7 @@ Ext.define('todolist-ext-js.view.FormTaskView',{
 
     requires:[
         'Ext.layout.Form',
-        'Ext.Button'
+        'Ext.Button',
     ],
     items:[{
         xtype:'formpanel',

@@ -2,18 +2,14 @@ Ext.define('todolist-ext-js.store.ToDoList',{
     extend: 'Ext.data.Store',
     alias: 'store.todolist',
     model: 'todolist-ext-js.model.Task',
-    data:{
-        items:[
-            {task: 'Découvrir EXT JS', date: new Date()},
-            {task: 'Découvrir Laminas', date: new Date()},
-            {task: 'Découvrir Laminas', date: new Date()}
-        ]
-    },
     proxy:{
-        type: 'memory',
+        type: 'ajax',
+        url:'https://localhost:5001/api/Task',
         reader:{
             type:'json',
-            rootProperty: 'items',
+            rootProperty: 'data',
         }
-    }
+    },
+    autoLoad: true,
+    autoSync: true,
 })

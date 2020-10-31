@@ -1,5 +1,6 @@
 Ext.define('todolist-ext-js.view.ToDoListView', {
     extend: 'Ext.grid.Grid',
+    id: 'todolistgrid',
     xtype: 'todolistview',
     title: 'ToDo List',
     store: {type: 'todolist'},
@@ -12,7 +13,7 @@ Ext.define('todolist-ext-js.view.ToDoListView', {
     columns: [{
         text: 'Task',
         flex: 1,
-        dataIndex: 'task',
+        dataIndex: 'content',
         minWidth: 100,
     }, {
         text: 'Date',
@@ -23,5 +24,6 @@ Ext.define('todolist-ext-js.view.ToDoListView', {
         text: 'Done',    
         xtype: 'checkcolumn',
         dataIndex: 'done'
-    }]
+    }],
+   
 });
