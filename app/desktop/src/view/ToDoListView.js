@@ -42,7 +42,7 @@ Ext.define('todolist-ext-js.view.ToDoListView', {
             {
                 approve: 
                 {
-                    iconCls: 'x-fa fa-check green',
+                    iconCls: 'x-fa fa-times green',
                     handler: 'deleteTask',
                 },
             }
