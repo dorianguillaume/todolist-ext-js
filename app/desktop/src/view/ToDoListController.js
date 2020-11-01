@@ -4,9 +4,7 @@ Ext.define('todolist-ext-js.view.ToDoListController', {
    
 
     deleteTask: function() {
-        // this.getView().store.removeAt()
-
-
+        //this.getView().store.removeAt(0);
     },
     
 })

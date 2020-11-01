@@ -5,9 +5,9 @@ Ext.define('todolist-ext-js.view.ToDoListView', {
     title: 'ToDo List',
     store: {type: 'todolist'},
     controller: 'todolistcontroller',
-    height: 800,
+    height: 400,
     width: 700,
-    multiColumnSort: true,
+    scrollable: true,
     requires: [
         'Ext.field.CheckboxGroup'
     ],
@@ -17,14 +17,20 @@ Ext.define('todolist-ext-js.view.ToDoListView', {
         dataIndex: 'content',
         minWidth: 100,
     }, {
-        text: 'Date',
-        width: 120,
-        dataIndex: 'date',
-        formatter: 'date("d/m/Y")'
-    }, {    
-        text: 'Done',    
+        text: 'Date de création',
+        width: 150,
+        dataIndex: 'dateCreation',
+        formatter: 'date("d/m/Y H:i")'
+    }, {
+        text: 'Date de fin estimée',
+        width: 150,
+        dataIndex: 'dateEnd',
+        formatter: 'date("d/m/Y H:i")'
+    }, {
+        text: 'Important',
         xtype: 'checkcolumn',
-        dataIndex: 'done'
+        dataIndex: 'important',
+        disabled: true,
     },
     {
         width: 70,

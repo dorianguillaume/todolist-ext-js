@@ -3,10 +3,13 @@ Ext.define('todolist-ext-js.model.Task',{
     alias: 'model.task',
     idProperty: 'extraIdProperty',
     fields:[
+        { name: 'id', type: 'int'},
         { name: 'content' },
-        { name: 'date',},
+        { name: 'dateCreation',},
+        { name: 'dateEnd' },
         { name: 'done', type: 'boolean', defaultValue: false}
     ],
+
     proxy: {
         type: 'ajax',
         reader: {
