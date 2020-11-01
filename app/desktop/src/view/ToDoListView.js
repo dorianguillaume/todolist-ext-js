@@ -5,7 +5,7 @@ Ext.define('todolist-ext-js.view.ToDoListView', {
     title: 'ToDo List',
     store: {type: 'todolist'},
     controller: 'todolistcontroller',
-    height: 400,
+    height: 800,
     width: 700,
     multiColumnSort: true,
     requires: [
@@ -37,7 +37,7 @@ Ext.define('todolist-ext-js.view.ToDoListView', {
                 approve: 
                 {
                     iconCls: 'x-fa fa-check green',
-                    handler: 'reloadAction',
+                    handler: 'deleteTask',
                 },
             }
         }

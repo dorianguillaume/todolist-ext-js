@@ -13,6 +13,8 @@ Ext.define('todolist-ext-js.view.FormTaskController', {
         })
         var store = Ext.getStore('ToDoList')
         store.add(task)
+
+        //Reload la vue avec la liste des tâches
         Ext.getCmp('todolistgrid').store.reload()
         },
     

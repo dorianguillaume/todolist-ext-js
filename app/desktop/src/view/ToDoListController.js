@@ -3,8 +3,10 @@ Ext.define('todolist-ext-js.view.ToDoListController', {
     alias: 'controller.todolistcontroller',
    
 
-    reloadAction: function() {
-        this.getView().store.reload()
+    deleteTask: function() {
+        // this.getView().store.removeAt()
+
+
     },
     
 })
